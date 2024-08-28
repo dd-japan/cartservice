@@ -36,6 +36,7 @@ jobs:
 
       - name: Build and push docker image to ECR
         id: build-image
+        working-directory: src/
         env:
           REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           REPOSITORY: "b1o7r7e0/cartservice"
